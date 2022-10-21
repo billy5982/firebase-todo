@@ -1,18 +1,12 @@
-import {
-  getDatabase,
-  onChildAdded,
-  onChildRemoved,
-  ref,
-  update,
-} from "firebase/database";
-import { useEffect, useState } from "react";
-import DoPanel from "./DoPanel";
+import { getDatabase, onChildAdded, onChildRemoved, ref, update } from 'firebase/database';
+import { useEffect, useState } from 'react';
+import DoPanel from './DoPanel';
 
 export default function MainWindow() {
   const [startDo, setStart] = useState([]);
   const [progressDo, setProgress] = useState([]);
   const [finDo, setFin] = useState([]);
-  const todoRef = ref(getDatabase(), "todos/");
+  const todoRef = ref(getDatabase(), 'todos/');
 
   const addTodos = () => {
     let start = [];
@@ -20,15 +14,15 @@ export default function MainWindow() {
     let fin = [];
     onChildAdded(todoRef, (data) => {
       let trueData = data.val();
-      if (trueData.do === "start") {
+      if (trueData.do === 'start') {
         start.push(trueData);
         start.sort((a, b) => a.timeStamp - b.timeStamp);
         setStart([...start]);
-      } else if (trueData.do === "progress") {
+      } else if (trueData.do === 'progress') {
         progress.push(trueData);
         fin.sort((a, b) => a.timeStamp - b.timeStamp);
         setProgress([...progress]);
-      } else if (trueData.do === "done") {
+      } else if (trueData.do === 'done') {
         fin.push(trueData);
         fin.sort((a, b) => a.timeStamp - b.timeStamp);
         setFin([...fin]);
@@ -38,7 +32,7 @@ export default function MainWindow() {
     onChildRemoved(todoRef, (data) => {
       //지워진 데이터 => data
       let trueData = data.val();
-      if (trueData.do === "start") {
+      if (trueData.do === 'start') {
         let index = start.findIndex((data) => data.id === trueData.id);
         if (index === 0 && progress.length === 1) {
           start = [];
@@ -48,7 +42,7 @@ export default function MainWindow() {
           start.sort((a, b) => a.timeStamp - b.timeStamp);
           setStart([...start]);
         }
-      } else if (trueData.do === "progress") {
+      } else if (trueData.do === 'progress') {
         let index = progress.findIndex((data) => data.id === trueData.id);
         if (index === 0 && progress.length === 1) {
           progress = [];
@@ -58,7 +52,7 @@ export default function MainWindow() {
           progress.sort((a, b) => a.timeStamp - b.timeStamp);
           setProgress([...progress]);
         }
-      } else if (trueData.do === "done") {
+      } else if (trueData.do === 'done') {
         let index = fin.findIndex((data) => data.id === trueData.id);
         if (index === 0 && fin.length === 1) {
           fin = [];
@@ -77,10 +71,10 @@ export default function MainWindow() {
   }, []);
 
   return (
-    <div className="h-full w-full flex">
-      <DoPanel title={"To Start"} data={startDo} className="w-1/3" />
-      <DoPanel title={"In Progress"} data={progressDo} className="w-1/3" />
-      <DoPanel title={"Done"} data={finDo} className="w-1/3" />
+    <div className='h-full w-full flex'>
+      <DoPanel title={'To Start'} data={startDo} className='w-1/3' />
+      <DoPanel title={'In Progress'} data={progressDo} className='w-1/3' />
+      <DoPanel title={'Done'} data={finDo} className='w-1/3' />
     </div>
   );
 }
