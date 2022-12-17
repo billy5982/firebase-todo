@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# FireBase Team Todo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🥂 프로젝트 소개
 
-## Available Scripts
+- 개인이 아닌 팀의 일정을 확인하고 싶은 유저!
+- 급한 일정을 최우선으로 처리해야하는 유저!
+- 팀과 함께 일정을 공유할 수 있는 Todo 서비스 `🔥TeamTodo`를 이용해보세요!
 
-In the project directory, you can run:
+## 🍸 서비스 소개
 
-### `npm start`
+### **🏠 시작 페이지(로그인 회원가입)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div style ="display:flex;align-items:center;">
+<div style = "margin-right:1rem; width:50%; ">
+<li style="margin-bottom:1rem; align-self:start;">
+회원가입을 진행 할 수 있으며, 로그인 창과 왕래할 수 있습니다.
+</li>
+<li style="margin-bottom:1rem; align-self:start;">
+유효성 검사를 통해 보안에 필요한 요건을 충족할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251898-267a9757-de3e-4f79-bb21-fe2e12b83c36.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start; margin-bottom:3.5rem">
+로그인을 진행 할 수 있으며, 회원가입 창과 왕래할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251894-00aea0d6-50fe-4ae5-80d4-f6408da0800d.gif" style="width:300px;">
+</div>
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **🧑🏻‍💻 메인 페이지(Userpannel)**
 
-### `npm test`
+<div style ="display:flex;align-items:center;">
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start;">
+로그아웃을 할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251895-dba2eaf2-472f-4228-b4b8-beaf287f5302.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start; ">
+프로필 사진을 변경할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251896-c78d99f3-5328-4c57-a245-e5b29d810735.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **📝 메인 페이지(MainPannel) : Todo의 정렬은 마감 일정 순으로 배치됩니다.**
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div style ="display:flex;align-items:center;">
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start;">
+Todo를 제작할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251887-c5914b77-2297-4f26-8d51-fc8b44c8f331.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start; ">
+해야할 일을 진행 중인 상태로 변경할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251893-0fcc8281-bd9f-4dd0-b132-888e5d08efd3.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+</div>
+<div style ="display:flex;align-items:center;">
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start;">
+Todo 목록을 삭제할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208252221-b9f9a8bc-1112-482f-bc1f-02763d0f5152.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+<div style = "margin-right:1rem; width:50%;">
+<li style="margin-bottom:1rem; align-self:start; ">
+팀에 소속된 유저 정보를 확인할 수 있습니다.
+</li>
+<img src="https://user-images.githubusercontent.com/104412610/208251899-3e60ddd8-e313-48b1-af92-167a88a972c9.gif" style="width:300px; margin-bottom : 1rem;">
+</div>
+</div>
